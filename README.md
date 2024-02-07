@@ -1,8 +1,6 @@
-# Astro Starter Kit: Basics
+# Astro Tutorial
 
-```sh
-npm create astro@latest -- --template basics
-```
+[Official documentation](https://docs.astro.build/en/tutorial)
 
 ## 🚀 Project Structure
 
