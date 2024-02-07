@@ -1,8 +1,8 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import BlogPost from "../../components/Blogpost.astro";
+import BlogPost from "../../components/BlogPost.astro";
 
-export async function getStaticPaths() {
+export async function getStaticPaths(): Promise<any> {
   const allPosts = await Astro.glob("../posts/*.md");
 
   const uniqueTags = [
@@ -21,14 +21,14 @@ export async function getStaticPaths() {
 }
 
 const { tag } = Astro.params;
-const { posts } = Astro.props;
+const { posts }: any = Astro.props;
 ---
 
 <BaseLayout pageTitle={tag}>
   <p>Posts etiquetados con {tag}</p>
   <ul>
     {
-      posts.map((post) => (
+      posts.map((post: any) => (
         <BlogPost url={post.url} title={post.frontmatter.title} />
       ))
     }
